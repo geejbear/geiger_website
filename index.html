@@ -4,282 +4,54 @@
          <meta name="viewport" content="initial-scale=1, width=device-width">
          <meta charset="utf-8">
         <title>My Website</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-        <script>
-            const color_array = ['red', 'blueviolet', 'orange', 'violet', 'turquoise'];
-
-            document.addEventListener('DOMContentLoaded', function(){
-
-                const myImg = document.querySelector('img');
-
-                myImg.onclick = () => {
-                   const mySrc = myImg.getAttribute('src'); 
-                   if (mySrc === 'images/Guillermo2_Copyright_Sven_Kristian_Wolf_180.jpeg') {
-                        myImg.setAttribute('src', 'images/Guillermo2_Copyright_Sven_Kristian_Wolf.jpeg'); 
-                        alert("Thanks! I somehow ended up upside down!");
-                   } else {
-                        myImg.setAttribute('src', 'images/Guillermo2_Copyright_Sven_Kristian_Wolf_180.jpeg')
-                   }
-                };
-
-                const background_color = document.getElementById('background_color');
-
-                let randNum = () => {
-                    return Math.floor(Math.random() * color_array.length);
-                };
-
-                let changeColor = () => {
-                    let num = randNum();
-                    let randomColor = color_array[num];
-                    document.body.style.backgroundColor = randomColor;
-                };
-
-                background_color.addEventListener('click', changeColor);
-
-            });
-
-        </script>
+        <link href="static/style.css" rel="stylesheet">
+        <script src="script.js"></script>
         <title> Welcome </title>
-
-
-        <style>
-            body {
-                display: flex;
-                flex-wrap: wrap;
-                background-color: orange;
-            }
-            
-            h1 {
-                padding: 30px;
-            }
-
-            
-            button {
-                display: flex;
-                background-color: transparent;
-                padding: 1em 2em;
-                margin-left: 42%;
-                margin-top: 5%;
-                border:5px solid #ffffff;
-                font-family: sans-serif;
-                font-size: 14pt;
-                color: #ffffff;
-                letter-spacing: 1.5px;
-                border-radius: 50px;
-                cursor: pointer;
-                outline: none;
-            };
-            
-            a {
-                color: blueviolet;
-                font-size: 20px;
-                font-family: 'Courier New', Courier, monospace;
-                text-decoration: none;
-            }
-
-            a:hover {
-                color: black;
-            }
-
-            /*body {
-                background-image: url(guillermo_0001.jpg);
-                background-size: cover;
-            }*/
-
-            li {
-                float: left;
-                display: inline;
-            }
-            ul {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                width: 200px;
-            }
-
-            li a {
-                display: block;
-            }
-
-            img {
-                margin-top: 30px;
-                margin-left: 0px;
-                padding-top: 40px;
-                padding-bottom: 30px;
-            }
-
-            #bio {
-                font-size: 16px;
-                line-height: 1cm;
-                margin-top: 30px;
-                margin-left: 30px;
-            }
-
-            .flashy_header {
-                padding-top: 60px;
-                padding-left: 60px;
-                margin-top: 60px;
-                margin-bottom: 60px;
-                margin-left: 60px;
-                margin-right: 60px;
-                font-style: italic;
-                background-color: violet;
-                border-radius: 25px;
-            }
-
-            #concert {
-                border-style:double;
-                padding: 30px;
-            }
-
-            h4 {
-                font-size: 16px;
-            }
-
-            #image_upcomming {
-                margin-top: 30px;
-                padding-top: 30px;
-            }
-
-    </style>
     </head>
     <body>
-        <button id="background_color">Change colour </button>
-        <div class="container text-center">
-            <div class="row align-items-start">
-              <div class="col">
-                <img src="images/Guillermo2_Copyright_Sven_Kristian_Wolf.jpeg"  class="img-fluid" alt="Copyright Swen-Kristian Wolf" width="700" height="1000">
-              </div>
+        <div class="container">
+            <button class="centre-up" id="background_color">Change colour </button>
+            <img class="centre-middle" src="images/Guillermo2_Copyright_Sven_Kristian_Wolf.jpeg" alt="Copyright Swen-Kristian Wolf">
+            <div class="right">
+                <h2 class="bio">
+                    <p>
+                        Guillermo is an <b>engenier at heart</b>. His tools being his violin, his bow and his <b>insatiable curiosity</b>.
+                        Born in Mexico city in a family of music-lovers. He learned
+                        piano with Isolda Stepanova and violin with Alexander Klochkov.
+                        With only 16 years of age, he held an <b>accademist position</b> at the Carlos Chavez Symphony Orchestra, with whom
+                        he later debuted as soloist playing J. S. Bach´s A minor violin concerto.
+                        Guillermo was granted the “Kyra and Douglas
+                        Downie” and “Linda Hill” awards for his musical talent, after
+                        being accepted at the Royal College of
+                        Music in 2010 where he concluded his <b>bachelor degree</b> with
+                        Daniel Rowland. He later concluded a
+                        <b>Masters degree</b> and <b>postgraduate studies</b> in <b>historical performance practise</b> at
+                        Mozarteum University with Vittorio
+                        Ghielmi and Reinhard Goebel as his mentors.
+                        During his studies, Guillermo closely learnt from and
+                        collaborated with members of the <b>Academy
+                        of Ancient Music</b>, <b>the Orchestra of the
+                        Age of Enlightenment</b> and <b>the Mahler Chamber Orchestra</b>, like Steven Devine, Jonathan Manson and 
+                        Matthew Truscott,
+                        as well as well as with members of <b>Il Giardino Armonico</b> and the english period ensemble
+                        <b>Florilegium</b>.
+                        Guillermo has been a worthy participant at the <b>Hermilo Novelo violin competition 2007</b> and the <b>Vivaldi-Vienna string competiton 2019</b>.
+                        He had taken part in a variaty of music festivals, both as soloist and chamber musician, including the <b>Cevantino Festival, London Haendel Festival,
+                        Innsbrucker Festwoche Der Alten Musik, Im Dialog Festival</b> and <b>Jazz and the City</b>. 
+                        Guillermo performs regularily with the austrian ensamble <b>Bach Werk Vokal</b>, diving in the vast world of Bach's vocal music,
+                        and with <b>The Van Swietens</b>, a young orchestra in collaboration with other
+                        chamber musicians, including members
+                        of the Hanson and Adelphi Quartets and with whom he recently 
+                        has taken part in an
+                        <b>unprecedented recording</b> of the 3rd and 4rd
+                        Beethoven/Lachner Piano Concertos with string chamber orchestra.
+                        Guillermo is a dedicated pedagogue working both as <b>violin teacher</b> and in regular workshops throughout the year, 
+                        like the <b>KlangKarton</b> concert series for children, organized by the Stiftung Mozarteum. He has also taken part
+                        in workshops with an emphasis on inclusivity for the austrian  association
+                        <b>Spiel Raum Musik</b>.   
+                    </p>
+                </h2>
             </div>
-        </div>
-        <hr>
-            <div class="container text-center">              
-                <div class="row align-items-start">
-                    <div class="col">
-                    <h2 id="bio">
-                    <p1>
-                    Guillermo is an <b>engenier at heart</b>. His tools being his violin, his bow and his <b>insatiable curiosity</b>.
-                    Born in Mexico city in a family of music-lovers. He learned
-                    piano with Isolda Stepanova and violin with Alexander Klochkov.
-                    With only 16 years of age, he held an <b>accademist position</b> at the Carlos Chavez Symphony Orchestra, with whom
-                    he later debuted as soloist playing J. S. Bach´s A minor violin concerto.
-                    Guillermo was granted the “Kyra and Douglas
-                    Downie” and “Linda Hill” awards for his musical talent, after
-                    being accepted at the Royal College of
-                    Music in 2010 where he concluded his <b>bachelor degree</b> with
-                    Daniel Rowland. He later concluded a
-                    <b>Masters degree</b> and <b>postgraduate studies</b> in <b>historical performance practise</b> at
-                    Mozarteum University with Vittorio
-                    Ghielmi and Reinhard Goebel as his mentors.
-                    During his studies, Guillermo closely learnt from and
-                    collaborated with members of the <b>Academy
-                    of Ancient Music</b>, <b>the Orchestra of the
-                    Age of Enlightenment</b> and <b>the Mahler Chamber Orchestra</b>, like Steven Devine, Jonathan Manson and 
-                    Matthew Truscott,
-                    as well as well as with members of <b>Il Giardino Armonico</b> and the english period ensemble
-                    <b>Florilegium</b>.
-                    Guillermo has been a worthy participant at the <b>Hermilo Novelo violin competition 2007</b> and the <b>Vivaldi-Vienna string competiton 2019</b>.
-                    He had taken part in a variaty of music festivals, both as soloist and chamber musician, including the <b>Cevantino Festival, London Haendel Festival,
-                    Innsbrucker Festwoche Der Alten Musik, Im Dialog Festival</b> and <b>Jazz and the City</b>. 
-                    Guillermo performs regularily with the austrian ensamble <b>Bach Werk Vokal</b>, diving in the vast world of Bach's vocal music,
-                    and with <b>The Van Swietens</b>, a young orchestra in collaboration with other
-                    chamber musicians, including members
-                    of the Hanson and Adelphi Quartets and with whom he recently 
-                    has taken part in an
-                    <b>unprecedented recording</b> of the 3rd and 4rd
-                    Beethoven/Lachner Piano Concertos with string chamber orchestra.
-                    Guillermo is a dedicated pedagogue working both as <b>violin teacher</b> and in regular workshops throughout the year, 
-                    like the <b>KlangKarton</b> concert series for children, organized by the Stiftung Mozarteum. He has also taken part
-                    in workshops with an emphasis on inclusivity for the austrian  association
-                    <b>Spiel Raum Musik</b>.   
-                    </p1>
-                    </h2>
-              </div>
             </div>
-        </div>
-
-    <br> </br>
-    <div class="container text-center">
-        <div class="row align-items-start">
-          <div class="col">
-            <hr>
-            <h1>Upcoming </h1>
-            <div class="container">
-                <h4 id="concert">
-                    18.06.2023 – 18:00
-                Salzburg, Christuskirche
-                „Jauchzet und lobet“
-                BWV 230, 160 Anh., 137, 69a, 51
-                <br></br> 
-                <a href="https://www.bachwerkvokal.com/konzerte">Tickets</a>
-                </h4>
-            </div>
-
-            <div class="container">
-                <h4 id="concert">
-                    22.06.2023 – 19:30
-                    St. Pölten, Franziskanerkirche (AT)
-                    Barockfestival St. Pölten
-                    „Jauchzet und lobet“
-                    BWV 230, 160 Anh., 137, 69a, 51 
-                <br></br> 
-                <a href="https://www.bachwerkvokal.com/konzerte">Tickets</a>
-                </h4>
-            </div>
-
-            <div class="container">
-                <h4 id="concert">
-                    30.06.2023 – 18:00
-                    Leipzig, Thomaskirche (D)
-                    „Motette“
-                    BWV 230, 160 Anh.
-                <br></br> 
-                <a href="https://www.thomaskirche.org/erleben/kalender">Tickets</a>
-                </h4>
-            </div>
-
-            <div class="container">
-                <h4 id="concert">
-                    01.07.2023 - 15:00
-                    Leipzig, Thomaskirche (D)
-                    „Motette“
-                    BWV 69a
-                <br></br> 
-                <a href="https://www.thomaskirche.org/erleben/kalender">Tickets</a>
-                </h4>
-            </div>
-
-            <div class="container">
-                <h4 id="concert">
-                    06.07.2023 - 17:30
-                    The Van Swietens
-                    Mozarteum University - Solitär
-                    „Haydn Tanzt“ Haydn Sinfonien und moderner Tanz
-                <br></br> 
-                    <a href="https://my.weezevent.com/the-van-swietens-haydn-tanzt">Tickets</a>
-                </h4>
-            </div>
-            
-            <br></br> 
-
-           
-
-          </div>
-          <div id="image_upcomming" class="col">
-            <img src="images/Guillermo_Copyright_Sven_Kristian_Wolf.jpeg" alt="Copyright Swen-Kristian Wolf" width="600" height="450">
-          </div>
-        </div>
-      </div>
-            
-        <hr>
-        <!--a href="mailto:gumarudego@gmai.com"></a><button >email me</button></a-->
-
-      <div class="container text-center">
-        <div class="row align-items-start">
-        <hr>            
-            <a href="templates/impressum.html"><h4>Impressum</h4></a>
-          </div>
-        </div>
-      </div>
     </body>
 </html>
