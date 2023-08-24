@@ -3,6 +3,8 @@ body {
 
 }
 .container {
+    width: 100vw;
+    heigth: 100vh;
     display: grid;
     gap: 1.5rem;
     grid-template-columns: [one] 10rem [two] 30rem [three] 10rem;
