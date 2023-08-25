@@ -158,7 +158,7 @@
 @media (min-width: 40em) {
     .bio-grid {
         grid-template-columns: [one] 10rem [two] 30rem [three] 10rem;
-        grid-template-rows: [one] 6rem [two] 40rem [three] 20rem [four] 30rem;
+        grid-template-rows: [one] 6rem [two] 30rem [three] 20rem [four] 30rem;
     }
 }
 
@@ -178,7 +178,7 @@
 
     grid-row-start: 1;
     grid-row-end: 2;
-
+    justify-self: end;
 }
 
 .bio-grid .bio-image {
@@ -214,6 +214,7 @@ button {
     margin-top: 5%;
     border:5px solid black;
     font-family: var(--ff-primary); 
+    font-weight: bold;
     font-size: 1rem;
     color: black;
     letter-spacing: 1.5px;
