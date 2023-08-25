@@ -1,8 +1,7 @@
-const color_array = ['pink', 'blueviolet', 'orange', 'violet', 'turquoise', 'darkgreen', 'yellow', 'darkred'];
+const color_array = ['blueviolet', 'orange', 'violet', 'turquoise', 'darkgreen', 'darkred'];
 
 document.addEventListener('DOMContentLoaded', function(){
 
-    screen.orientation.lock("portrait"); //prevents the screen to rotate on mobile devices
     const myImg = document.querySelector('img');
 
     myImg.onclick = () => {
