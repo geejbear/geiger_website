@@ -213,13 +213,13 @@ button {
     margin-left: 10%;
     margin-top: 5%;
     border:5px solid black;
-    font-family: var(--ff-primary) 
+    font-family: var(--ff-primary); 
     font-size: 1rem;
     color: black;
     letter-spacing: 1.5px;
     border-radius: 50px;
     cursor: pointer;
-};
+}
 
 button:focus {
     outline: none;
