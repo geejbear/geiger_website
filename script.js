@@ -6,11 +6,11 @@ document.addEventListener('DOMContentLoaded', function(){
 
     myImg.onclick = () => {
        const mySrc = myImg.getAttribute('src'); 
-       if (mySrc === 'images/Guillermo2_Copyright_Sven_Kristian_Wolf_180.jpeg') {
-            myImg.setAttribute('src', 'images/Guillermo2_Copyright_Sven_Kristian_Wolf.jpeg'); 
-            alert("Thanks! I somehow ended up upside down!");
+       if (mySrc === 'images/guille_1.jpeg') {
+            myImg.setAttribute('src', 'images/guille_2.jpeg'); 
+            alert("Hello! ;)");
        } else {
-            myImg.setAttribute('src', 'images/Guillermo2_Copyright_Sven_Kristian_Wolf_180.jpeg')
+            myImg.setAttribute('src', 'images/guille_1.jpeg')
        }
     };
 

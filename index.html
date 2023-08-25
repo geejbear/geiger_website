@@ -4,54 +4,71 @@
          <meta name="viewport" content="initial-scale=1, width=device-width">
          <meta charset="utf-8">
         <title>My Website</title>
+        <!--Fonts-->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200&display=swap" rel="stylesheet">
+        
+        <!--my css-->
         <link href="static/style.css" rel="stylesheet">
         <script src="script.js"></script>
         <title> Welcome </title>
     </head>
     <body>
-        <div class="container">
-            <button class="centre-up" id="background_color">Change colour </button>
-            <img class="centre-middle" src="images/Guillermo2_Copyright_Sven_Kristian_Wolf.jpeg" alt="Copyright Swen-Kristian Wolf">
-            <div class="right">
-                <h2 class="bio">
-                    <p>
-                        Guillermo is an <b>engenier at heart</b>. His tools being his violin, his bow and his <b>insatiable curiosity</b>.
-                        Born in Mexico city in a family of music-lovers. He learned
-                        piano with Isolda Stepanova and violin with Alexander Klochkov.
-                        With only 16 years of age, he held an <b>accademist position</b> at the Carlos Chavez Symphony Orchestra, with whom
-                        he later debuted as soloist playing J. S. Bach´s A minor violin concerto.
-                        Guillermo was granted the “Kyra and Douglas
-                        Downie” and “Linda Hill” awards for his musical talent, after
-                        being accepted at the Royal College of
-                        Music in 2010 where he concluded his <b>bachelor degree</b> with
-                        Daniel Rowland. He later concluded a
-                        <b>Masters degree</b> and <b>postgraduate studies</b> in <b>historical performance practise</b> at
-                        Mozarteum University with Vittorio
-                        Ghielmi and Reinhard Goebel as his mentors.
-                        During his studies, Guillermo closely learnt from and
-                        collaborated with members of the <b>Academy
-                        of Ancient Music</b>, <b>the Orchestra of the
-                        Age of Enlightenment</b> and <b>the Mahler Chamber Orchestra</b>, like Steven Devine, Jonathan Manson and 
-                        Matthew Truscott,
-                        as well as well as with members of <b>Il Giardino Armonico</b> and the english period ensemble
-                        <b>Florilegium</b>.
-                        Guillermo has been a worthy participant at the <b>Hermilo Novelo violin competition 2007</b> and the <b>Vivaldi-Vienna string competiton 2019</b>.
-                        He had taken part in a variaty of music festivals, both as soloist and chamber musician, including the <b>Cevantino Festival, London Haendel Festival,
-                        Innsbrucker Festwoche Der Alten Musik, Im Dialog Festival</b> and <b>Jazz and the City</b>. 
-                        Guillermo performs regularily with the austrian ensamble <b>Bach Werk Vokal</b>, diving in the vast world of Bach's vocal music,
-                        and with <b>The Van Swietens</b>, a young orchestra in collaboration with other
-                        chamber musicians, including members
-                        of the Hanson and Adelphi Quartets and with whom he recently 
-                        has taken part in an
-                        <b>unprecedented recording</b> of the 3rd and 4rd
-                        Beethoven/Lachner Piano Concertos with string chamber orchestra.
-                        Guillermo is a dedicated pedagogue working both as <b>violin teacher</b> and in regular workshops throughout the year, 
-                        like the <b>KlangKarton</b> concert series for children, organized by the Stiftung Mozarteum. He has also taken part
-                        in workshops with an emphasis on inclusivity for the austrian  association
-                        <b>Spiel Raum Musik</b>.   
-                    </p>
-                </h2>
+        <div class="bio-grid">
+            <div class="color-change-button">
+                <div class="flex">
+                    <div>
+                        <button class="color-change-button" id="background_color">Click</button>
+                    </div>
+                </div>
             </div>
+            <div class="bio-image">
+                <div class="flex">
+                        <img src="images/guille_1.jpeg" alt="Copyright Swen-Kristian Wolf">
+                </div>
             </div>
+            <div class="bio-text">
+                <div class="flex">
+                    <div>
+                        <p>
+                            Guillermo is an <b>engenieer at heart</b>. His tools being his violin, his bow and his <b>insatiable curiosity</b>.
+                            Born in Mexico city in a family of music-lovers. He learned
+                            piano with Isolda Stepanova and violin with Alexander Klochkov.
+                            With only 16 years of age, he held an <b>accademist position</b> at the Carlos Chavez Symphony Orchestra, with whom
+                            he later debuted as soloist playing J. S. Bach´s A minor violin concerto.
+                            Guillermo was granted the “Kyra and Douglas
+                            Downie” and “Linda Hill” awards for his musical talent, after
+                            being accepted at the Royal College of
+                            Music in 2010 where he concluded his <b>bachelor degree</b> with
+                            Daniel Rowland. He later concluded a
+                            <b>Masters degree</b> and <b>postgraduate studies</b> in <b>historical performance practise</b> at
+                            Mozarteum University with Vittorio
+                            Ghielmi and Reinhard Goebel as his mentors.
+                            During his studies, Guillermo closely learnt from and
+                            collaborated with members of the <b>Academy
+                            of Ancient Music</b>, <b>the Orchestra of the
+                            Age of Enlightenment</b> and <b>the Mahler Chamber Orchestra</b>, like Steven Devine, Jonathan Manson and 
+                            Matthew Truscott,
+                            as well as well as with members of <b>Il Giardino Armonico</b> and the english period ensemble
+                            <b>Florilegium</b>.
+                            Guillermo has been a worthy participant at the <b>Hermilo Novelo violin competition 2007</b> and the <b>Vivaldi-Vienna string competiton 2019</b>.
+                            He had taken part in a variety of music festivals, both as soloist and chamber musician, including the <b>Cevantino Festival, London Haendel Festival,
+                            Innsbrucker Festwoche Der Alten Musik, Im Dialog Festival</b> and <b>Jazz and the City</b>. 
+                            Guillermo performs regularly with the Austrian ensamble <b>Bach Werk Vokal</b>, diving in the vast world of Bach's vocal music,
+                            and with <b>The Van Swietens</b>, a young orchestra in collaboration with other
+                            chamber musicians, including members
+                            of the Hanson and Adelphi Quartets and with whom he recently 
+                            has taken part in an
+                            <b>unprecedented recording</b> of the 3rd and 4rd
+                            Beethoven/Lachner Piano Concertos with string chamber orchestra.
+                            Guillermo is a dedicated pedagogue working both as <b>violin teacher</b> and in regular workshops throughout the year, 
+                            like the <b>KlangKarton</b> concert series for children, organised by the Stiftung Mozarteum. He has also taken part
+                            in workshops with an emphasis on inclusivity for the Austrian  association
+                            <b>Spiel Raum Musik</b>.   
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

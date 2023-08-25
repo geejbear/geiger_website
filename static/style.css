@@ -1,62 +1,229 @@
-body {
-    background-color: orange;
+/*The following code until the "component2 section has been borrowed from Kevin Powell's Github repo: 
+    https://github.com/kevin-powell/learn-grid-the-easy-way/blob/main/style-start.css*/
 
-}
-.container {
-    width: 100vw;
-    heigth: 100vh;
+:root {
+    --clr-primary-400: 263 55% 52%;
+    --clr-secondary-400: 217 19% 35%;
+    --clr-secondary-500: 219 29% 14%;
+    --clr-neutral-100: 0 0% 100%;
+    --clr-neutral-200: 210 46% 95%;
+    --clr-neutral-300: 0 0% 81%;
+  
+    --ff-primary: 'Bricolage Grotesque', sans-serif;
+  
+    --fw-400: 500;
+    --fw-700: 600;
+  
+    --fs-300: 0.6875rem;
+    --fs-400: 0.8125rem;
+    --fs-500: 1.25rem;
+  }
+  
+  /* Box sizing rules */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  /* Remove default margin */
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd {
+    margin: 0;
+  }
+  
+  /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+  ul[role="list"],
+  ol[role="list"] {
+    list-style: none;
+  }
+  
+  /* Set core root defaults */
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+  
+  /* Set core body defaults */
+  body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+  }
+  
+  /* A elements that don't have a class get default styles */
+  a:not([class]) {
+    text-decoration-skip-ink: auto;
+  }
+  
+  /* Make images easier to work with */
+  img,
+  picture {
+    max-width: 100%;
+    display: block;
+  }
+  
+  /* Inherit fonts for inputs and buttons */
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+  
+  /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+  @media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+      scroll-behavior: auto;
+    }
+  
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  
+  body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+  
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-400);
+  
+    background-color: hsl(var(--clr-neutral-200));
+  }
+  
+  h1,
+  h2,
+  h3 {
+    font-weight: var(--fw-700);
+  }
+  
+  /* utilities */
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap, 1rem);
+  }
+  
+  .flow > *:where(:not(:first-child)) {
+    margin-top: var(--flow-spacer, 1em);
+  }
+  
+  .bg-primary-400 {
+    background: hsl(var(--clr-primary-400));
+  }
+  .bg-secondary-400 {
+    background: hsl(var(--clr-secondary-400));
+  }
+  .bg-secondary-500 {
+    background: hsl(var(--clr-secondary-500));
+  }
+  
+  .bg-neutral-100 {
+    background: hsl(var(--clr-neutral-100));
+  }
+  
+  .text-neutral-100 {
+    color: hsl(var(--clr-neutral-100));
+  }
+  .text-secondary-400 {
+    color: hsl(var(--clr-secondary-400));
+  }
+  .border-primary-400 {
+    border: 2px solid #a775f1;
+  }
+
+
+/* Components */
+
+
+.bio-grid {
     display: grid;
     gap: 1.5rem;
-    grid-template-columns: [one] 10rem [two] 30rem [three] 10rem;
-    grid-template-rows: [one] 6rem [two] 30rem [three] 30rem [four] 30rem;
 }
 
+@media (min-width: 40em) {
+    .bio-grid {
+        grid-template-columns: [one] 10rem [two] 30rem [three] 10rem;
+        grid-template-rows: [one] 6rem [two] 40rem [three] 20rem [four] 30rem;
+    }
+}
 
-
-.right {
+.bio-grid .bio-text {
     grid-column-start: 1;
     grid-column-end: 4;
 
     grid-row-start: 4;
     grid-row-end: 5;
+    justify-self: stretch;
 
 }
 
-.centre-up {
+.bio-grid .color-change-button {
     grid-column-start: 1;
     grid-column-end: 2;
 
     grid-row-start: 1;
     grid-row-end: 2;
-    justify-self: start;
 
 }
 
-.centre-middle {
-    grid-column-start: 2;
-    grid-column-end: 3;
+.bio-grid .bio-image {
+    grid-column-start: 1;
+    grid-column-end: 3; 
     grid-row-start: 2;
     grid-column-end: 4;
+    justify-self: start;
+}
+
+.bio-text .flex div p {
+    font-family: var(--ff-primary);
+    padding-left: 5%;
+    padding-left: 5%;
+    padding-bottom: 5%;
+}
+
+@media (min-width:40em) {
+    .bio-grid .bio-image {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
 }
 
 h1 {
-    padding: 30px;
+    padding: 2rem;
 }
 
 button {
     background-color: transparent;
-    padding: 1em 2em;
+    padding: .2em 1em;
     margin-left: 10%;
     margin-top: 5%;
-    border:5px solid #ffffff;
-    font-family: sans-serif;
-    font-size: 14pt;
-    color: #ffffff;
+    border:5px solid black;
+    font-family: var(--ff-primary) 
+    font-size: 1rem;
+    color: black;
     letter-spacing: 1.5px;
     border-radius: 50px;
     cursor: pointer;
-    outline: none;
 };
+
+button:focus {
+    outline: none;
+}
 
 a {
     color: blueviolet;
@@ -68,11 +235,6 @@ a {
 a:hover {
     color: black;
 }
-
-/*body {
-    background-image: url(guillermo_0001.jpg);
-    background-size: cover;
-}*/
 
 li {
     float: left;
@@ -89,48 +251,35 @@ li a {
     display: block;
 }
 
-img {
-    width: 500px;
-    height: 750px;
-
+.bio-image img {
+    border-radius: 90%;
     padding-top: 120px;
+    background-color: black !important;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
-.bio {
+/* .bio {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
     font-weight: normal;
     font-size: 1.5rem;
     line-height: 1cm;
     padding-left: 1cm;
     padding-right: 1cm;
-    padding-bottom: 1cm;
+    padding-bottom: 1cm; 
 
-    /*margin-top: 30px; 
-    margin-left: 30px; */
-}
+    margin-top: 30px; 
+    margin-left: 30px; 
+}*/
 
-.flashy_header {
-    padding-top: 60px;
-    padding-left: 60px;
-    margin-top: 60px;
-    margin-bottom: 60px;
-    margin-left: 60px;
-    margin-right: 60px;
-    font-style: italic;
-    background-color: violet;
-    border-radius: 25px;
-}
 
-#concert {
+/* #concert {
     border-style:double;
     padding: 30px;
-}
-
-h4 {
-    font-size: 16px;
 }
 
 #image_upcomming {
     margin-top: 30px;
     padding-top: 30px;
-}
+} */
+
