@@ -166,10 +166,16 @@
     grid-column-start: 1;
     grid-column-end: 4;
 
-    grid-row-start: 4;
-    grid-row-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
     justify-self: stretch;
+}
 
+.bio-grid .bio-quote {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 5;
 }
 
 .bio-grid .color-change-button {
@@ -180,6 +186,7 @@
     grid-row-end: 2;
     justify-self: end;
 }
+
 
 .bio-grid .bio-image {
     grid-column-start: 1;
