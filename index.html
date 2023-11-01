@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
     <head>
          <meta name="viewport" content="initial-scale=1, width=device-width">
          <meta charset="utf-8">
         <title>My Website</title>
         <!--Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque&family=Caveat&family=Nunito:wght@300;600&family=Playpen+Sans:wght@200;500&family=Roboto:wght@300;700&display=swap" 
+            rel="stylesheet">
         
         <!--my css-->
         <link href="static/style.css" rel="stylesheet">
@@ -18,12 +20,15 @@
             <div class="color-change-button">
                 <div class="flex">
                     <div>
-                        <button class="color-change-button" id="background_color">Welcome</button>
-                            <form action="templates/bio.html" >
-                                <button id="background_color">Bio</button> 
+                        <button class="color-change-button" id="background_color">Willkommen</button>
+                            <form action="templates/bio.html">
+                                <button id="#">Über mich</button> 
                             </form>
-                            <form target="_blank" action="https://www.youtube.com/@guillemtz5079">
-                                <button id="background_color">Listen</button> 
+                            <form action="https://www.youtube.com/@guillemtz5079" target="_blank">
+                                <button id="youtube">Hören</button> 
+                            </form>
+                            <form action="templates/resourcen.html">
+                                <button id="#">Resourcen</button> 
                             </form>
                             <form action="templates/impressum.html">
                                 <button id="background_color">Impressum</button> 
@@ -33,15 +38,21 @@
             </div>
             <div class="bio-image">
                 <div class="flex">
-                        <img src="images/guille_1.jpeg" alt="Copyright Swen-Kristian Wolf">
+                        <img src="images/guille_1.jpeg" alt="Copyright Sven-Kristian Wolf">
                 </div>
             </div>
             <div class="bio-quote">
                 <div class="flex">
-                    “Perfection is finally attained not when there is no longer anything to add, but when there is no longer anything to take away.” 
+                <div class="quote">
                     <p>
-                        (Antoine de Saint-Exupéry)
+                        "Perfektion ist nicht dann erreicht, wenn man nichts mehr hinzufügen, sondern wenn man nichts mehr weglassen kann"
+                        <br>
+                        <b style="font-weight: 200;">(Antoine de Saint-Exupéry)</b>
                     </p>
                 </div>
+
+                </div>
             </div>
+        </div>
+    </body>
 </html>

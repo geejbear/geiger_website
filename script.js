@@ -1,31 +1,27 @@
-const color_array = ['blueviolet', 'orange', 'violet', 'turquoise', 'darkgreen', 'darkred'];
+if (document.querySelector && document.addEventListener) {
 
-document.addEventListener('DOMContentLoaded', function(){
+	const color_array = ['blueviolet', 'orange', 'violet', 'turquoise', 'darkgreen', 'darkred'];
 
-    const myImg = document.querySelector('img');
+	document.addEventListener('DOMContentLoaded', function(){
 
-    myImg.onclick = () => {
-       const mySrc = myImg.getAttribute('src'); 
-       if (mySrc === 'images/guille_1.jpeg') {
-            myImg.setAttribute('src', 'images/guille_2.jpeg'); 
-            alert("Hello! ;)");
-       } else {
-            myImg.setAttribute('src', 'images/guille_1.jpeg')
-       }
-    };
+		const hören = document.querySelector("#youtube");
+		hören.addEventListener("click", function () {
+			alert("Sie werden zu Youtube verbunden :)");
+		});
 
-    const background_color = document.getElementById('background_color');
+	    const background_color = document.getElementById('background_color');
 
-    let randNum = () => {
-        return Math.floor(Math.random() * color_array.length);
-    };
+	    let randNum = () => {
+		return Math.floor(Math.random() * color_array.length);
+	    };
 
-    let changeColor = () => {
-        let num = randNum();
-        let randomColor = color_array[num];
-        document.body.style.backgroundColor = randomColor;
-    };
+	    let changeColor = () => {
+		let num = randNum();
+		let randomColor = color_array[num];
+		document.body.style.backgroundColor = randomColor;
+	    };
 
-    background_color.addEventListener('click', changeColor);
+	    background_color.addEventListener('click', changeColor);
 
-});
+	});
+}

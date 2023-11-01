@@ -9,10 +9,10 @@
     --clr-neutral-200: 210 46% 95%;
     --clr-neutral-300: 0 0% 81%;
   
-    --ff-primary: 'Bricolage Grotesque', sans-serif;
+    --ff-primary: 'Playpen Sans', cursive;
   
-    --fw-400: 500;
-    --fw-700: 600;
+    --fw-200: 200;
+    --fw-500: 500;
   
     --fs-300: 0.6875rem;
     --fs-400: 0.8125rem;
@@ -100,7 +100,7 @@
     min-height: 100vh;
   
     font-family: var(--ff-primary);
-    font-weight: var(--fw-400);
+    font-weight: var(--fw-500);
   
     background-color: hsl(var(--clr-neutral-200));
   }
@@ -162,13 +162,14 @@
     }
 }
 
-.bio-grid .bio-text {
+.bio-grid .text {
     grid-column-start: 1;
     grid-column-end: 4;
 
     grid-row-start: 2;
     grid-row-end: 3;
     justify-self: stretch;
+    font-weight: var(--fw-200);
 }
 
 .bio-grid .bio-quote {
@@ -196,7 +197,7 @@
     justify-self: start;
 }
 
-.bio-text .flex div p {
+.text .flex div p {
     font-family: var(--ff-primary);
     padding-left: 5%;
     padding-left: 5%;
@@ -219,14 +220,19 @@ button {
     padding: .2em 1em;
     margin-left: 10%;
     margin-top: 5%;
-    border:5px solid black;
+    border:0.2rem solid black;
     font-family: var(--ff-primary); 
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: black;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.2rem;
     border-radius: 50px;
     cursor: pointer;
+}
+
+/*TODO : Do a js sctript to match hovering color to the actual bg colour*/
+button:hover {
+  color: hsl(195, 49%, 73%); 
 }
 
 button:focus {
@@ -248,6 +254,7 @@ li {
     float: left;
     display: inline;
 }
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -260,6 +267,7 @@ li a {
 }
 
 .bio-image img {
+    width: 100%;
     border-radius: 90%;
     padding-top: 120px;
     background-color: black !important;
@@ -267,27 +275,31 @@ li a {
     padding-right: 2%;
 }
 
-/* .bio {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
-    font-weight: normal;
-    font-size: 1.5rem;
-    line-height: 1cm;
-    padding-left: 1cm;
-    padding-right: 1cm;
-    padding-bottom: 1cm; 
 
-    margin-top: 30px; 
-    margin-left: 30px; 
-}*/
+table,
+caption {
 
-
-/* #concert {
-    border-style:double;
-    padding: 30px;
+  width: 100%;
+  background-color: rgb(163, 163, 163);
+  border-collapse: collapse;
 }
 
-#image_upcomming {
-    margin-top: 30px;
-    padding-top: 30px;
-} */
+caption,
+td,
+th {
+  padding: 1rem;
+}
 
+th,
+caption {
+  text-align: left;
+}
+
+caption {
+  background-color: gray;
+  text-transform: uppercase;
+}
+
+tr:nth-of-type(2n) {
+  background-color: white;
+} 
